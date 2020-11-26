@@ -55,7 +55,7 @@ extension MainVC  {
     }
     
     @objc
-    func bagDidTap(_ index: Int) {
+    func menuButtonPressed(_ index: Int) {
         showSideMenu(index: 0)
     }
     

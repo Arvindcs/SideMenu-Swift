@@ -21,6 +21,7 @@ class ProductCVCell: UICollectionViewCell {
     let imgView = UIImageView()
     let nameLbl = UILabel()
     let containerView = UIView()
+    let bagButton = UIButton()
     
     var product: Product! {
         didSet {
@@ -68,10 +69,15 @@ extension ProductCVCell {
         imgView.layer.cornerRadius = 10.0
         imgView.contentMode = .scaleToFill
         
-
-        //TODO: - OriginalPrice
-        nameLbl.configureNameForCell(false, line: 2, txtColor: .white, fontSize: 13.0, fontN: fontNamedBold)
-        nameLbl.textAlignment = .center
+        bagButton.frame = CGRect(x: frame.size.width - 40, y: frame.size.height - 30, width: 40.0, height: 40.0)
+        bagButton.setImage(UIImage(named: "bag-icon"), for: .normal)
+        bagButton.backgroundColor = .red
+        bagButton.layer.cornerRadius = 10
+        containerView.addSubview(bagButton)
+        
+        //TODO: - nameLbl
+        //bagButton.configureBagButton(containerView, imgNamed: "bag-icon", selector: #selector(bagButtonPressed))
+        nameLbl.configureNameForCell(false, line: 2, txtColor: .white, fontSize: 17.0, fontN: fontNamedBold)
         containerView.addSubview(nameLbl)
         
         NSLayoutConstraint.activate([
@@ -93,6 +99,11 @@ extension ProductCVCell {
         ])
         
         setupDarkMode()
+    }
+    
+    @objc
+    func bagButtonPressed() {
+    
     }
 }
 

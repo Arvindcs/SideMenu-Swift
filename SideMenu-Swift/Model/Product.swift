@@ -16,9 +16,7 @@ struct Product {
 
 
 func getProductList() -> [Product] {
-    
-    return
-        [Product(imageName: "nike-shoes-two",
+    return [Product(imageName: "nike-shoes-two",
                     productName: "Nike Zoom Rival Fly 2",
                     productDiscription: "Price - ₹15,595"),
             Product(imageName: "nike-shoes-three",
@@ -28,4 +26,13 @@ func getProductList() -> [Product] {
                     productName: "Nike Zoom Rival Fly 4",
                     productDiscription: "Price - ₹15,595")
     ]
+}
+
+func getBannerList() -> [Product] {
+    return [Product(imageName: "nike-shoes-one",
+                 productName: "Nike Zoom Rival Fly 2",
+                 productDiscription: "Price - ₹15,595"),
+         Product(imageName: "nike-shoes-one",
+                 productName: "Nike Zoom Rival Fly 2",
+                 productDiscription: "Price - ₹15,595")]
 }

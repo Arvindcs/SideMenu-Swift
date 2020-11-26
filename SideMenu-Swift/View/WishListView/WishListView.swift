@@ -34,7 +34,7 @@ extension WishListView {
     
     func setupNavi() {
         //TODO -
-        menuButton.configureMenuButton(self, imgNamed: "menu", selector: #selector(parentVC?.bagDidTap), controller: parentVC!)
+        menuButton.configureMenuButton(self, imgNamed: "menu", selector: #selector(parentVC?.menuButtonPressed), controller: parentVC!)
         menuButton.tag = 2
         addSubview(menuButton)
     }

@@ -24,6 +24,13 @@ extension UIButton {
         parentV.addSubview(self)
     }
     
+    func configureBagButton(_ parentV: UIView, imgNamed: String = "bag-icon", selector: Selector, controller: UIViewController = UIViewController()) {
+        frame = CGRect(x: frame.size.width - 40, y: frame.size.height - 30, width: 40.0, height: 40.0)
+        setImage(UIImage(named: "bag-icon"), for: .normal)
+        backgroundColor = .red
+        parentV.addSubview(self)
+    }
+    
     func configureAddBtn(_ view: UIView, selector: Selector, vc: UIViewController) {
         frame = CGRect(x: -10.0, y: 0.0, width: 40.0, height: 40.0)
         setImage(UIImage(named: "text.alignleft"), for: .normal)

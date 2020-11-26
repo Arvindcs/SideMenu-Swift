@@ -17,7 +17,8 @@ class HomeView: UIView {
     public let titleLabel = UILabel()
     
     private var parentVC: MainVC!
-    lazy var productList: [Product] = []
+    lazy var productList: [Product] = getProductList()
+    lazy var bannerList: [Product] = getBannerList()
 
     private var parallaxOffsetSpeed: CGFloat = 30.0
     private var cellHeight: CGFloat = 130.0
@@ -51,13 +52,11 @@ extension HomeView {
     }
     
     func setupNavi() {
-        
-        menuButton.configureMenuButton(self, imgNamed: "menu", selector: #selector(parentVC.bagDidTap), controller: parentVC!)
+        menuButton.configureMenuButton(self, imgNamed: "menu", selector: #selector(parentVC.menuButtonPressed), controller: parentVC!)
         titleLabel.configureMenuTitle(self ,txtColor: .black, fontSize: 25, isTxt: "Home")
     }
     
     private func fetchProducts() {
-        productList = getProductList()
         setupCV()
         setupTV()
         setupConstraint()
@@ -103,12 +102,12 @@ extension HomeView {
 extension HomeView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productList.count
+        return bannerList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCVCell.identifier, for: indexPath) as! ProductCVCell
-        cell.product = productList[indexPath.item]
+        cell.product = bannerList[indexPath.item]
         return cell
     }
 }
