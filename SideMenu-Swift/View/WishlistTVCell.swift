@@ -1,10 +1,3 @@
-//
-//  ProductTVCell.swift
-//  Fashi
-//
-//  Created by Jack Ily on 24/03/2020.
-//  Copyright © 2020 Jack Ily. All rights reserved.
-//
 
 import UIKit
 

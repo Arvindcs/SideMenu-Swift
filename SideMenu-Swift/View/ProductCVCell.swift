@@ -1,10 +1,4 @@
-//
-//  ProductCVCell.swift
-//  Fashi
-//
-//  Created by Jack Ily on 23/03/2020.
-//  Copyright © 2020 Jack Ily. All rights reserved.
-//
+
 
 import UIKit
 
