@@ -114,6 +114,23 @@
 			path = AboutView;
 			sourceTree = "<group>";
 		};
+		A45D41B0256FA5080058ABD9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A4B628A5256F26DF003C3182 /* Main.storyboard */,
+				A4B628AA256F26E0003C3182 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A45D41B1256FA5170058ABD9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A4B628A8256F26E0003C3182 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A4B62893256F26DF003C3182 = {
 			isa = PBXGroup;
 			children = (
@@ -133,14 +150,13 @@
 		A4B6289E256F26DF003C3182 /* SideMenu-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				A45D418F256F62DB0058ABD9 /* View */,
-				A4CC4690256F311000AC4D7A /* Model */,
-				A4B628B7256F2998003C3182 /* Extension */,
-				A4B628B5256F289F003C3182 /* Controller */,
+				A45D41B0256FA5080058ABD9 /* Storyboard */,
 				A4B628B4256F2895003C3182 /* AppDelegate */,
-				A4B628A5256F26DF003C3182 /* Main.storyboard */,
-				A4B628A8256F26E0003C3182 /* Assets.xcassets */,
-				A4B628AA256F26E0003C3182 /* LaunchScreen.storyboard */,
+				A4CC4690256F311000AC4D7A /* Model */,
+				A45D418F256F62DB0058ABD9 /* View */,
+				A4B628B5256F289F003C3182 /* Controller */,
+				A4B628B7256F2998003C3182 /* Extension */,
+				A45D41B1256FA5170058ABD9 /* Assets */,
 				A4B628AD256F26E0003C3182 /* Info.plist */,
 			);
 			path = "SideMenu-Swift";
